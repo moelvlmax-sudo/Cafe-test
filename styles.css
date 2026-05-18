@@ -1072,3 +1072,7 @@ html {
 		font-size: 1.6rem;
 	}
 }
+.link_productos{
+	text-decoration: none;
+	color: #000
+}
