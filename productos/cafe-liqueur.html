@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Baristas</title>
+    <!-- Google Fonts & FontAwesome (Mismos de tu index) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Enlazamos el CSS exclusivo de la página de producto -->
+    <link rel="stylesheet" href="producto.css">
+</head>
+<body>
+
+    <!-- Botón flotante para regresar a la tienda fácilmente -->
+    <div class="container-back">
+        <a href="../index.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Volver a la tienda
+        </a>
+    </div>
+
+    <main class="container-single-product">
+        <!-- Columna Izquierda: Imagen del producto -->
+        <section class="product-gallery">
+            <div class="main-image-container">
+                <!-- Aquí cambias la imagen según el café -->
+                <img src="../img/cafe-liqueurs.jpg" alt="Café Especial" id="product-img">
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Información y personalización de textos -->
+        <section class="product-info-details">
+            <span class="product-badge">Edición Especial</span>
+            <h1 class="product-title">Cafe Liqueur</h1>
+            
+            <div class="product-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <span class="reviews-count">(12 reseñas de clientes)</span>
+            </div>
+
+            <!-- Precios dinámicos -->
+            <div class="product-price-container">
+                <span class="current-price">$5.60</span>
+                <span class="old-price">$9.30</span>
+            </div>
+
+            <p class="product-description">
+                Sumérgete en una experiencia única con nuestro Café liqueur de selección. 
+                Perfectamente equilibrado con sutiles notas aromáticas y un cuerpo denso, 
+                ideal para los amantes del buen café que buscan un toque de distinción en su taza diaria.
+            </p>
+
+            <!-- Selector de cantidad y compra -->
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="qty-btn" onclick="this.nextElementSibling.stepDown()">-</button>
+                    <input type="number" value="1" min="1" max="10" readonly>
+                    <button class="qty-btn" onclick="this.previousElementSibling.stepUp()">+</button>
+                </div>
+                <button class="btn-add-to-cart">
+                    <i class="fa-solid fa-basket-shopping"></i> Añadir al Carrito
+                </button>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Ficha técnica o características del grano -->
+            <div class="product-specs">
+                <h3>Características del Grano</h3>
+                <ul>
+                    <li><strong><i class="fa-solid fa-earth-americas"></i> Origen:</strong> Tierras altas de Colombia / Variedad Irlandesa</li>
+                    <li><strong><i class="fa-solid fa-fire"></i> Tueste:</strong> Medio / Intenso</li>
+                    <li><strong><i class="fa-solid fa-mug-hot"></i> Notas de cata:</strong> Chocolate amargo, caramelo y un sutil toque de licor</li>
+                    <li><strong><i class="fa-solid fa-seedling"></i> Tipo de grano:</strong> 100% Arábica</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
